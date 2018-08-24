@@ -1,6 +1,8 @@
-package com.epam.jmstask.jms;
+package com.epam.jmstask.spring.rest;
 
+import com.epam.jmstask.spring.app.Book;
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 public class BookRestService {

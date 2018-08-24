@@ -1,5 +1,4 @@
-package com.epam.jmstask.jms;
-
+package com.epam.jmstask.spring.app;
 
 public class Book {
 	

@@ -1,7 +1,10 @@
-package com.epam.jmstask.jms;
+package com.epam.jmstask.spring.jms;
 
+import com.epam.jmstask.spring.app.Book;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
+
+
 
 @Component
 public class Consumer {
