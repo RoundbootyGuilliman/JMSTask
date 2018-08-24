@@ -1,19 +1,13 @@
 package com.epam.jmstask.jms;
 
-import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Component;
 
-//@MessageDriven(mappedName = "java:/myQueue")
-public class Consumer implements MessageListener {
+@Component
+public class Consumer {
 	
-	@Override
-	public void onMessage(Message message) {
-		try {
-			System.out.println("MESSAGE RECEIVED: " + message.getBody(String.class));
-		} catch (JMSException e) {
-			e.printStackTrace();
-		}
+	@JmsListener(destination = "mailbox", containerFactory = "myFactory")
+	public void receiveMessage(Book book) {
+		System.out.println("Received <" + book + ">");
 	}
 }
